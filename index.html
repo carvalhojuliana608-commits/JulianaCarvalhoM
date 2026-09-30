@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Massagem em domicílio em toda Malta com Juliana Carvalho: relaxante, drenagem linfática, shiatsu, deep tissue e mais.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Juliana Carvalho — Massoterapeuta">
+<meta property="og:description" content="Massagem em domicílio em toda Malta com Juliana Carvalho: relaxante, drenagem linfática, shiatsu, deep tissue e mais.">
+<meta property="og:locale" content="pt_BR">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23234B54'/%3E%3Ctext x='32' y='45' font-size='38' text-anchor='middle' fill='%23E3CD9C' font-family='serif'%3EJ%3C/text%3E%3C/svg%3E">
+<title>Juliana Carvalho — Massoterapeuta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italianno&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1E353D;
+    --teal-950: #142E35;
+    --teal-900: #234B54;
+    --teal-700: #2C5F6B;
+    --teal-500: #4C7C87;
+    --teal-300: #8FB1B9;
+    --gold: #C6A15B;
+    --gold-light: #E3CD9C;
+    --gold-dark: #8C6A2E;
+    --pale: #E6EEF1;
+    --pale-2: #F1F6F7;
+    --cream: #FCFBF8;
+    --white: #FFFFFF;
+    --line: #CFDEE2;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  *, *::before, *::after { box-sizing: inherit; }
+  html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+  body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: "Work Sans", sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+
+  .wrap {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* ---- Nav ---- */
+  header.nav {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: rgba(252, 251, 248, 0.92);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 10px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-name {
+    font-family: "Italianno", cursive;
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: var(--teal-900);
+    text-decoration: none;
+    letter-spacing: 0.01em;
+  }
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .nav-links a {
+    text-decoration: none;
+    font-size: 0.95rem;
+    color: var(--teal-900);
+    border-bottom: 1px solid transparent;
+    padding-bottom: 3px;
+    transition: border-color 0.2s ease;
+  }
+  .nav-links a:hover { border-color: var(--teal-500); }
+  .nav-toggle { display: none; }
+
+  .nav-logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border: 1.5px solid var(--gold);
+    border-radius: 50%;
+    background: var(--cream);
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+  .nav-logo svg { width: 72%; height: auto; display: block; overflow: visible; }
+
+  .hero .hero-cta { margin-top: 64px; }
+  .nav-book { padding: 10px 20px; font-size: 0.9rem; white-space: nowrap; flex-shrink: 0; }
+
+  /* ---- Hero ---- */
+  .hero {
+    padding: 84px 0 96px;
+    background: var(--teal-950);
+    color: var(--cream);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 82% 18%, rgba(198,161,91,0.14), transparent 55%);
+    pointer-events: none;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    align-items: center;
+    justify-items: center;
+    position: relative;
+  }
+  .hero-text { text-align: center; display: flex; flex-direction: column; align-items: center; }
+  .hero-text .eyebrow-line, .hero-text .section-head .rule-label { justify-content: center; }
+  .hero-photo {
+    position: relative;
+  }
+  .hero-photo .frame {
+    width: 100%;
+    aspect-ratio: 5 / 6;
+    border-radius: 12px 12px 130px 12px;
+    overflow: hidden;
+    background: var(--pale);
+    box-shadow: 0 28px 56px -20px rgba(0, 0, 0, 0.55);
+    border: 1px solid rgba(198,161,91,0.35);
+  }
+  .hero-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .hero-photo .ring {
+    position: absolute;
+    top: -18px;
+    right: -18px;
+    width: 84px;
+    height: 84px;
+    border: 1.5px solid var(--gold);
+    border-radius: 50%;
+    z-index: -1;
+  }
+  .eyebrow-line {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+  .eyebrow-line .rule { width: 32px; height: 1px; background: var(--gold); }
+  .eyebrow-line span {
+    font-size: 0.95rem;
+    color: var(--gold-light);
+    font-style: italic;
+    font-family: "Fraunces", serif;
+  }
+  h1.name {
+    font-family: "Italianno", cursive;
+    font-weight: 400;
+    font-size: clamp(3.6rem, 8vw, 6rem);
+    line-height: 1.15;
+    margin: 0 0 4px;
+    color: var(--gold-light);
+  }
+  .role-sub {
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+    color: var(--cream);
+    opacity: 0.85;
+    margin: 0 0 18px;
+    text-transform: uppercase;
+  }
+  .hero-tagline {
+    font-family: "Fraunces", serif;
+    font-style: italic;
+    font-size: 1.25rem;
+    max-width: 46ch;
+    color: rgba(252, 251, 248, 0.82);
+    margin: 48px auto 0;
+  }
+  .cta-row { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; justify-content: center; margin-top: 22px; }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 30px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 0.98rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+  }
+  .btn-primary {
+    background: var(--gold);
+    color: var(--teal-950);
+    border: 1px solid var(--gold);
+  }
+  .btn-primary:hover { background: var(--gold-light); border-color: var(--gold-light); transform: translateY(-1px); }
+  .btn-ghost {
+    background: transparent;
+    color: var(--teal-900);
+    border: 1px solid var(--line);
+  }
+  .btn-ghost:hover { border-color: var(--teal-500); }
+
+  /* ---- Stats strip ---- */
+  .stats {
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    background: var(--pale-2);
+  }
+  .stats-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 30px 32px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: center;
+  }
+  .stat b {
+    display: block;
+    font-family: "Fraunces", serif;
+    font-size: 1.9rem;
+    color: var(--teal-700);
+    font-weight: 500;
+  }
+  .stat span {
+    font-size: 0.88rem;
+    color: var(--teal-900);
+    opacity: 0.85;
+  }
+
+  /* ---- Section shell ---- */
+  section { padding: 88px 0; }
+  .section-head { margin-bottom: 44px; max-width: 62ch; }
+  .section-head .rule-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+  .section-head .rule-label .rule { width: 32px; height: 1.5px; background: var(--gold); }
+  .section-head .rule-label span {
+    font-family: "Fraunces", serif;
+    font-style: italic;
+    color: var(--teal-700);
+    font-size: 0.98rem;
+  }
+  h2 {
+    font-family: "Fraunces", serif;
+    font-weight: 500;
+    font-size: clamp(1.9rem, 3vw, 2.5rem);
+    margin: 0 0 14px;
+    color: var(--teal-900);
+    line-height: 1.15;
+  }
+  .section-head p {
+    font-size: 1.05rem;
+    color: var(--ink);
+    margin: 0;
+  }
+
+  /* ---- About ---- */
+  #about .about-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 56px;
+    align-items: start;
+  }
+  #about p { font-size: 1.05rem; margin: 0 0 16px; max-width: 56ch; }
+  .quote-block {
+    background: var(--pale);
+    border-radius: 4px;
+    padding: 32px;
+    font-family: "Fraunces", serif;
+    font-style: italic;
+    font-size: 1.15rem;
+    color: var(--teal-900);
+    line-height: 1.5;
+  }
+
+  /* ---- Techniques ---- */
+  .chip-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 14px;
+  }
+  .chip {
+    border: 1px solid var(--line);
+    background: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .chip summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 14px 18px;
+    font-size: 0.95rem;
+    color: var(--teal-900);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .chip summary::-webkit-details-marker { display: none; }
+  .chip summary::after {
+    content: "+";
+    font-family: "Fraunces", serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: var(--teal-500);
+    flex: none;
+    transition: transform 0.2s ease;
+  }
+  .chip[open] summary::after { content: "–"; }
+  .chip[open] { border-color: var(--teal-500); }
+  .chip[open] summary { border-bottom: 1px solid var(--line); }
+  .chip p {
+    margin: 0;
+    padding: 14px 18px 16px;
+    font-size: 0.9rem;
+    color: var(--ink);
+    line-height: 1.55;
+  }
+
+  /* ---- Testimonials ---- */
+  .testimonial-grid {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    cursor: grab;
+    padding-bottom: 12px;
+    margin: 0 -32px;
+    padding-left: 32px;
+    padding-right: 32px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--teal-300) transparent;
+  }
+  .testimonial-grid.dragging { cursor: grabbing; scroll-snap-type: none; user-select: none; }
+  .testimonial-grid::-webkit-scrollbar { height: 6px; }
+  .testimonial-grid::-webkit-scrollbar-thumb { background: var(--teal-300); border-radius: 4px; }
+  .testimonial-card {
+    flex: 0 0 auto;
+    width: 320px;
+    scroll-snap-align: start;
+  }
+  .testimonial-card {
+    background: var(--white);
+    border-top: 3px solid var(--gold);
+    border-radius: 4px;
+    padding: 32px 32px 28px;
+    box-shadow: 0 18px 32px -22px rgba(20, 46, 53, 0.35);
+  }
+  .testimonial-card p {
+    margin: 0 0 18px;
+    font-size: 1.02rem;
+    line-height: 1.6;
+    color: var(--ink);
+  }
+  .testimonial-card .who {
+    font-family: "Fraunces", serif;
+    font-style: italic;
+    font-size: 0.92rem;
+    color: var(--gold-dark);
+    font-weight: 600;
+  }
+  .testimonial-card.dark {
+    background: var(--teal-700);
+  }
+  .testimonial-card.dark p { color: rgba(252, 251, 248, 0.9); }
+  .testimonial-card.dark .who { color: var(--gold-light); }
+
+  /* ---- Pricing ---- */
+  #pricing { background: var(--pale-2); }
+  .price-note {
+    font-size: 0.92rem;
+    color: var(--teal-700);
+    margin-top: 6px;
+  }
+  .table-scroll { overflow-x: auto; border-radius: 6px; border: 1px solid var(--line); background: var(--white); }
+  table.price-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 560px;
+    font-size: 0.96rem;
+  }
+  table.price-table thead th {
+    background: var(--teal-700);
+    color: var(--white);
+    font-weight: 500;
+    text-align: left;
+    padding: 16px 18px;
+    font-family: "Work Sans", sans-serif;
+  }
+  table.price-table thead th:not(:first-child) { text-align: center; }
+  table.price-table tbody td {
+    padding: 14px 18px;
+    border-top: 1px solid var(--line);
+  }
+  table.price-table tbody td:not(:first-child) { text-align: center; font-variant-numeric: tabular-nums; }
+  table.price-table tbody tr:nth-child(even) { background: var(--pale-2); }
+  table.price-table tbody td.treatment { font-weight: 500; color: var(--teal-900); }
+  table.price-table td.dash { color: var(--teal-300); }
+
+  /* Coluna "Sessão avulsa" em destaque (discreto) */
+  table.price-table thead th:nth-child(2) { background: var(--gold); color: var(--teal-950); font-weight: 600; }
+  table.price-table tbody td:nth-child(2),
+  table.price-table tbody tr:nth-child(even) td:nth-child(2) {
+    background: rgba(198, 161, 91, 0.10);
+    color: var(--teal-950);
+    font-size: 0.96rem;
+    font-weight: 600;
+    border-left: 1px solid rgba(198, 161, 91, 0.6);
+    border-right: 1px solid rgba(198, 161, 91, 0.6);
+  }
+
+  /* ---- Packages ---- */
+  .package-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .package-card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 32px;
+  }
+  .package-card.featured { border-color: var(--gold); box-shadow: 0 18px 32px -22px rgba(20, 46, 53, 0.35); position: relative; }
+  .package-card h3 {
+    font-family: "Fraunces", serif;
+    font-weight: 500;
+    font-size: 1.4rem;
+    margin: 0 0 4px;
+    color: var(--teal-900);
+  }
+  .package-card .sub { font-size: 0.9rem; color: var(--teal-700); margin-bottom: 20px; }
+  .package-card ul { list-style: none; margin: 0; padding: 0; }
+  .package-card li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-top: 1px solid var(--line);
+    font-size: 0.96rem;
+  }
+  .package-card li:first-child { border-top: none; }
+  .package-card li b { color: var(--teal-900); font-weight: 500; }
+
+  /* ---- Contact / footer ---- */
+  #contact {
+    background: var(--teal-900);
+    color: var(--white);
+  }
+  #contact .section-head .rule-label span { color: var(--gold-light); }
+  #contact .section-head .rule-label .rule { background: var(--gold); }
+  #contact h2 { color: var(--white); }
+  #contact .section-head p { color: rgba(255,255,255,0.82); }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+  .contact-list { list-style: none; margin: 0; padding: 0; }
+  .contact-list li {
+    padding: 14px 0;
+    border-top: 1px solid rgba(255,255,255,0.18);
+    font-size: 1.02rem;
+  }
+  .contact-list li:first-child { border-top: none; }
+  .contact-list a { text-decoration: none; }
+  .contact-list a:hover { text-decoration: underline; }
+  .contact-list .label {
+    display: block;
+    font-size: 0.82rem;
+    color: var(--gold-light);
+    margin-bottom: 3px;
+    font-family: "Fraunces", serif;
+    font-style: italic;
+  }
+  footer.credit {
+    text-align: center;
+    padding: 22px 32px;
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.55);
+    border-top: 1px solid rgba(255,255,255,0.15);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
+
+  /* ---- Responsive ---- */
+  @media (max-width: 860px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 0; }
+    h1.name { font-size: clamp(2.6rem, 12vw, 3.6rem); }
+    .role-sub { font-size: 0.72rem; }
+    .hero-tagline { font-size: 1.02rem; margin-top: 36px; margin-bottom: 0; }
+    .hero .hero-cta { margin-top: 48px; }
+    .about-grid { grid-template-columns: 1fr !important; }
+    .package-grid { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .stats-inner { grid-template-columns: 1fr; gap: 22px; }
+    .nav-inner { flex-direction: row; gap: 12px; padding: 10px 16px; }
+    .nav-links { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 4px 10px; }
+    .nav-links a { font-size: 0.76rem; }
+    .nav-logo { width: 52px; height: 52px; }
+    html { scroll-padding-top: 76px; }
+    section { padding: 64px 0; }
+    .hero { padding: 48px 0 56px; text-align: center; }
+    .cta-row { justify-content: center; }
+    .eyebrow-line, .section-head .rule-label { justify-content: center; }
+    #about .about-grid, #about p { text-align: left; }
+    .hero-tagline { margin-left: auto; margin-right: auto; }
+  }
+
+  .lang-btn { flex: none; margin-left: 14px; background: transparent; border: 1px solid var(--gold); color: var(--teal-900); border-radius: 3px; padding: 6px 10px; font: 600 0.78rem "Work Sans", sans-serif; letter-spacing: 0.06em; cursor: pointer; }
+  .lang-btn:hover { background: var(--gold-light); }
+  .nav-links { margin-left: auto; }
+  @media (max-width: 860px) { .lang-btn { margin-left: 8px; padding: 5px 8px; } }
+
+  /* ---- Otimização para celular ---- */
+  html { -webkit-text-size-adjust: 100%; }
+  a, button, summary { -webkit-tap-highlight-color: rgba(198,161,91,0.25); }
+  .wa-float { display: none; }
+  @media (max-width: 860px) {
+    body { padding-bottom: 84px; }
+    .wrap { padding: 0 20px; }
+    html { scroll-padding-top: 108px; }
+    /* menu em duas linhas: logo + idioma em cima, links embaixo */
+    .nav-inner { flex-wrap: wrap; padding: 8px 16px 0; row-gap: 4px; }
+    .nav-logo { width: 44px; height: 44px; order: 1; }
+    .lang-btn { order: 2; margin-left: auto; min-height: 36px; padding: 6px 14px; font-size: 0.82rem; }
+    .nav-links { order: 3; width: 100%; margin: 0; justify-content: space-between; gap: 0; border-top: 1px solid var(--line); flex-wrap: nowrap; }
+    .nav-links a { display: block; font-size: 0.86rem; padding: 10px 6px; border-bottom: 0; }
+    /* seções mais compactas */
+    section { padding: 52px 0; }
+    .hero { padding: 44px 0 52px; }
+    .hero-tagline { margin-top: 28px; }
+    .hero .hero-cta { margin-top: 36px; }
+    .section-head { margin-bottom: 28px; }
+    .section-head p, #about p { font-size: 1rem; }
+    #about p[style] { font-size: 1.2rem !important; }
+    /* botões grandes para o toque */
+    .btn { min-height: 50px; justify-content: center; }
+    .hero-cta .btn, .contact-grid .btn { width: 100%; max-width: 340px; }
+    /* técnicas em uma coluna */
+    .chip-grid { grid-template-columns: 1fr; gap: 10px; }
+    .chip summary { min-height: 52px; padding: 14px 16px; }
+    /* depoimentos */
+    .testimonial-grid { margin: 0 -20px; padding-left: 20px; padding-right: 20px; gap: 16px; }
+    .testimonial-card { width: 82vw; max-width: 320px; padding: 26px 22px 22px; }
+    .testimonial-card p { font-size: 0.98rem; }
+    /* tabela de preços sem rolagem lateral */
+    table.price-table { min-width: 0; font-size: 0.84rem; }
+    table.price-table thead th { padding: 12px 8px; font-size: 0.76rem; line-height: 1.25; }
+    table.price-table tbody td { padding: 12px 8px; }
+    table.price-table tbody td.treatment { padding-left: 12px; line-height: 1.3; }
+    /* contato */
+    .contact-list li { padding: 16px 0; }
+    .contact-list a { display: inline-block; padding: 2px 0; word-break: break-word; }
+    /* botão fixo do WhatsApp */
+    .wa-float {
+      display: flex; align-items: center; justify-content: center;
+      position: fixed; left: 16px; right: 16px; z-index: 30;
+      bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+      min-height: 52px; border-radius: 999px;
+      background: var(--gold); color: var(--teal-950);
+      font-weight: 600; font-size: 1rem; text-decoration: none;
+      box-shadow: 0 10px 24px -8px rgba(20, 46, 53, 0.55);
+    }
+  }
+
+  /* ---- Logo no centro do menu ---- */
+  .nav-inner { position: relative; }
+  .lang-btn { position: absolute; right: 32px; top: 50%; transform: translateY(-50%); margin: 0; }
+  @media (min-width: 861px) {
+    .nav-inner { justify-content: center; gap: 30px; }
+    .nav-links { display: contents; }
+    .nav-links li:nth-child(1) { order: 1; }
+    .nav-links li:nth-child(2) { order: 2; }
+    .nav-logo { order: 3; }
+    .nav-links li:nth-child(3) { order: 4; }
+    .nav-links li:nth-child(4) { order: 5; }
+  }
+  @media (max-width: 860px) {
+    .nav-inner { justify-content: center; }
+    .nav-logo { order: 1; }
+    .lang-btn { position: absolute; right: 16px; top: 8px; transform: none; }
+  }
+
+  /* ---- Logo grande ---- */
+  header.nav { position: static; }
+  html { scroll-padding-top: 16px; }
+  .nav-logo { width: 130px; height: 130px; }
+  .nav-inner { padding-top: 16px; padding-bottom: 12px; }
+  @media (max-width: 860px) {
+    html { scroll-padding-top: 16px; }
+    .nav-logo { width: 96px; height: 96px; }
+    .nav-inner { padding: 12px 16px 0; }
+    .lang-btn { top: 12px; }
+  }
+
+  /* ---- Mais espaço entre o logo e a linha das opções ---- */
+  .nav-inner { padding-bottom: 26px; }
+  @media (max-width: 860px) {
+    .nav-inner { padding-bottom: 0; }
+    .nav-links { margin-top: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="#top" aria-label="Juliana Carvalho — início"><svg viewBox="20 245 700 430" role="img" aria-hidden="true" focusable="false"><defs><linearGradient id="jcGold" gradientUnits="userSpaceOnUse" x1="40" y1="260" x2="700" y2="660"><stop offset="0" stop-color="#D2B06A"/><stop offset="0.5" stop-color="#B8923F"/><stop offset="1" stop-color="#8C6A2E"/></linearGradient></defs><path fill="url(#jcGold)" fill-rule="nonzero" d="M292,342 L291,343 L290,345 L288,346 L287,348 L285,350 L283,352 L281,353 L279,355 L277,357 L274,360 L272,362 L270,363 L267,365 L265,367 L263,369 L260,370 L258,372 L255,373 L252,375 L250,376 L247,377 L244,379 L241,380 L238,381 L235,382 L232,384 L229,385 L226,385 L223,386 L221,387 L218,387 L215,388 L213,388 L210,388 L207,389 L204,389 L202,389 L199,388 L196,388 L193,388 L191,387 L188,387 L186,386 L183,385 L181,384 L179,384 L177,383 L175,381 L173,380 L171,379 L169,377 L167,376 L166,374 L164,372 L162,370 L161,368 L159,366 L158,364 L157,361 L156,359 L155,357 L154,355 L154,353 L153,351 L153,349 L153,347 L152,345 L152,343 L153,340 L153,338 L153,336 L153,334 L154,331 L155,329 L156,327 L157,325 L158,323 L159,321 L160,319 L162,318 L164,316 L166,314 L168,312 L170,311 L173,309 L175,307 L178,306 L181,304 L184,303 L187,301 L191,300 L194,299 L198,297 L202,296 L205,295 L209,294 L214,293 L218,292 L222,291 L227,291 L232,290 L237,289 L242,289 L247,288 L252,288 L258,287 L263,287 L268,287 L274,286 L279,286 L285,286 L290,286 L295,286 L301,287 L306,287 L312,287 L318,288 L323,289 L329,289 L335,290 L341,291 L347,292 L352,292 L358,293 L364,294 L369,294 L374,295 L380,295 L385,295 L390,295 L395,296 L400,296 L404,296 L409,296 L414,295 L418,295 L423,295 L427,295 L432,295 L436,295 L440,294 L443,294 L447,293 L451,293 L454,292 L457,292 L460,291 L463,290 L465,290 L468,289 L470,288 L472,287 L474,286 L476,285 L478,284 L480,283 L482,283 L483,282 L485,281 L487,281 L488,280 L490,280 L492,279 L493,279 L495,278 L497,278 L498,277 L500,277 L501,277 L502,276 L503,276 L504,276 L505,276 L506,276 L506,276 L507,276 L507,276 L507,276 L507,276 L508,277 L508,277 L508,277 L508,278 L508,278 L508,278 L509,279 L509,279 L509,279 L509,280 L509,280 L508,280 L508,280 L508,281 L508,281 L507,282 L506,283 L505,283 L504,284 L503,285 L502,286 L501,287 L499,287 L498,288 L497,289 L495,290 L493,290 L492,291 L490,291 L488,292 L487,292 L485,293 L482,293 L480,293 L477,293 L475,293 L472,293 L469,293 L467,293 L464,293 L461,294 L458,294 L455,295 L453,295 L450,296 L447,297 L445,298 L442,298 L440,299 L437,300 L435,301 L433,302 L430,303 L428,304 L425,305 L423,306 L420,307 L418,309 L416,310 L413,312 L411,314 L409,315 L407,317 L404,319 L402,321 L400,323 L397,325 L395,327 L393,329 L390,331 L388,333 L386,336 L383,338 L381,340 L379,343 L377,346 L374,348 L372,351 L369,354 L367,357 L364,360 L362,363 L359,366 L357,370 L354,373 L352,376 L349,380 L346,383 L344,387 L341,390 L338,394 L335,398 L333,401 L330,405 L327,409 L325,413 L322,417 L319,421 L316,425 L313,429 L310,433 L308,437 L305,442 L302,446 L299,450 L296,454 L293,458 L290,462 L288,467 L285,471 L282,475 L279,479 L276,483 L274,487 L271,492 L268,496 L266,500 L263,504 L260,508 L257,512 L255,516 L252,520 L249,524 L246,527 L244,531 L241,535 L238,538 L235,542 L232,546 L229,549 L226,553 L223,556 L220,560 L218,563 L215,567 L212,570 L209,573 L206,576 L203,580 L199,583 L196,585 L193,588 L190,591 L187,594 L184,597 L180,600 L177,603 L174,605 L171,608 L168,611 L164,613 L161,616 L158,618 L155,621 L152,623 L149,625 L145,626 L142,628 L139,630 L136,631 L133,633 L130,635 L127,636 L124,637 L121,639 L119,640 L116,641 L113,642 L110,643 L107,643 L105,644 L102,644 L100,644 L97,644 L95,644 L92,644 L89,644 L87,644 L84,643 L81,643 L79,642 L76,642 L74,641 L72,640 L69,639 L67,638 L65,637 L63,636 L62,635 L60,634 L59,633 L57,631 L56,630 L55,629 L53,627 L52,625 L51,624 L50,622 L50,621 L49,619 L48,617 L48,615 L48,614 L48,612 L47,610 L48,608 L48,606 L48,604 L49,602 L49,600 L50,598 L51,596 L52,594 L53,591 L54,589 L56,587 L57,585 L59,582 L60,580 L62,578 L64,576 L66,573 L68,571 L71,569 L73,567 L76,564 L78,562 L81,560 L84,558 L87,555 L90,553 L93,551 L97,549 L101,546 L104,544 L108,542 L113,540 L117,537 L122,535 L127,533 L132,530 L137,528 L143,526 L148,523 L154,521 L160,519 L166,516 L172,514 L178,512 L184,510 L190,507 L196,505 L202,503 L208,501 L214,498 L220,496 L226,494 L232,492 L238,490 L245,488 L251,485 L257,483 L264,481 L270,479 L276,477 L283,475 L289,474 L295,472 L301,470 L308,468 L314,467 L320,465 L326,464 L332,462 L339,461 L345,460 L351,459 L357,457 L364,456 L370,455 L376,453 L382,452 L389,451 L395,449 L401,448 L408,446 L414,445 L420,443 L427,442 L433,440 L440,439 L446,437 L452,436 L459,434 L465,432 L471,431 L478,429 L484,428 L490,426 L495,424 L501,423 L507,422 L512,420 L518,419 L523,417 L528,416 L533,415 L538,413 L543,412 L548,411 L553,409 L558,408 L563,406 L568,405 L572,403 L577,401 L582,400 L587,398 L591,396 L596,394 L601,391 L606,389 L610,387 L615,384 L620,382 L624,380 L629,377 L633,375 L637,372 L641,370 L645,367 L649,365 L653,362 L656,360 L660,357 L663,355 L667,352 L670,350 L673,347 L676,344 L679,342 L682,339 L685,336 L687,334 L689,331 L692,328 L693,326 L695,323 L697,320 L698,317 L699,314 L699,311 L699,308 L699,306 L699,303 L699,300 L698,297 L697,294 L696,292 L695,289 L694,287 L693,285 L692,283 L691,281 L689,279 L688,277 L686,275 L684,273 L682,272 L680,271 L678,269 L676,268 L674,267 L672,266 L670,265 L667,264 L665,263 L663,263 L661,262 L658,262 L656,261 L654,261 L652,260 L649,260 L647,260 L645,259 L643,259 L640,259 L638,259 L635,259 L633,259 L630,260 L628,260 L625,261 L622,261 L620,262 L617,263 L614,264 L612,266 L609,267 L606,269 L603,270 L600,272 L597,273 L595,275 L592,277 L589,279 L586,281 L583,283 L580,285 L578,287 L575,290 L572,292 L570,294 L567,297 L564,299 L562,302 L559,304 L556,307 L554,310 L551,312 L548,315 L545,318 L543,321 L540,324 L537,327 L535,330 L532,333 L529,336 L526,340 L524,343 L521,347 L518,350 L515,354 L512,358 L509,361 L506,365 L504,369 L501,373 L498,377 L495,381 L492,384 L489,388 L486,392 L483,396 L480,400 L477,404 L474,408 L471,412 L467,416 L464,420 L461,424 L458,429 L454,433 L451,437 L448,441 L445,445 L442,449 L439,453 L436,457 L433,461 L430,465 L428,469 L425,473 L423,476 L420,480 L418,484 L415,487 L413,491 L411,494 L409,498 L407,501 L405,505 L403,508 L401,511 L399,515 L397,518 L396,521 L394,524 L392,527 L391,530 L389,533 L388,536 L386,539 L385,543 L384,546 L383,549 L382,552 L380,555 L379,558 L379,561 L378,564 L377,567 L376,570 L376,573 L376,576 L376,580 L376,583 L376,586 L376,589 L376,592 L377,594 L377,597 L378,600 L379,603 L379,606 L380,608 L381,611 L382,614 L383,616 L384,619 L386,621 L387,624 L388,626 L390,628 L392,630 L394,632 L396,634 L398,636 L400,638 L402,640 L404,642 L406,644 L408,645 L411,647 L413,648 L415,649 L418,651 L420,652 L423,653 L425,654 L428,654 L431,655 L434,656 L437,656 L440,657 L442,657 L445,658 L449,658 L452,658 L455,658 L458,659 L461,659 L464,659 L468,659 L471,659 L475,659 L479,658 L482,658 L486,658 L490,657 L494,656 L498,655 L501,654 L505,653 L509,652 L513,650 L516,648 L520,646 L523,644 L527,641 L530,638 L534,635 L537,632 L540,629 L543,626 L547,623 L550,620 L553,616 L556,613 L559,610 L561,607 L564,604 L567,600 L569,597 L572,594 L575,591 L577,587 L579,584 L582,581 L584,577 L586,574 L588,571 L590,567 L592,564 L594,561 L595,558 L597,555 L598,552 L599,549 L600,546 L600,544 L601,541 L602,538 L602,536 L602,533 L602,531 L602,528 L602,526 L601,524 L601,521 L600,519 L599,517 L599,515 L598,513 L597,511 L595,508 L594,506 L592,504 L591,502 L589,500 L587,498 L585,496 L583,495 L581,493 L578,491 L576,490 L574,488 L572,487 L569,486 L567,485 L565,484 L562,483 L560,483 L557,482 L555,482 L552,482 L550,482 L547,482 L544,482 L542,482 L539,483 L537,483 L534,484 L532,484 L529,485 L527,486 L524,486 L522,487 L519,489 L517,490 L514,491 L512,492 L509,494 L507,495 L505,497 L502,499 L500,500 L498,502 L496,504 L494,506 L492,508 L490,510 L488,512 L486,514 L484,516 L482,518 L481,520 L479,523 L478,525 L476,527 L475,530 L473,532 L472,535 L471,537 L469,540 L468,542 L467,545 L466,547 L465,550 L464,553 L464,555 L463,558 L462,561 L461,564 L461,567 L460,570 L460,573 L459,575 L459,578 L458,580 L458,582 L458,584 L457,586 L457,588 L459,588 L459,587 L460,585 L460,583 L461,581 L461,578 L462,576 L462,573 L463,570 L463,568 L464,565 L465,562 L466,559 L467,556 L468,554 L469,551 L470,549 L471,547 L472,544 L474,542 L475,540 L476,537 L478,535 L479,533 L481,530 L482,528 L484,526 L486,524 L487,522 L489,520 L491,518 L493,516 L494,515 L496,513 L498,511 L500,510 L502,508 L505,506 L507,505 L509,504 L511,502 L514,501 L516,500 L518,499 L521,498 L523,497 L525,496 L527,495 L529,495 L532,494 L534,494 L536,493 L538,493 L540,493 L543,492 L545,492 L547,492 L549,492 L551,493 L553,493 L555,493 L557,494 L559,494 L561,495 L563,495 L565,496 L567,497 L568,498 L570,499 L572,500 L574,502 L576,503 L578,504 L579,506 L581,508 L582,509 L584,511 L585,512 L586,514 L587,516 L588,517 L589,519 L589,521 L590,522 L590,524 L591,526 L591,527 L591,529 L591,531 L591,533 L591,535 L591,537 L591,539 L590,541 L590,543 L589,546 L588,548 L587,551 L586,553 L584,556 L583,559 L581,562 L579,565 L577,568 L575,571 L573,575 L571,578 L568,581 L566,584 L563,587 L561,590 L558,593 L556,596 L553,599 L550,602 L548,606 L545,609 L542,612 L539,615 L536,618 L532,621 L529,624 L526,627 L523,629 L520,632 L517,634 L513,636 L510,638 L507,640 L504,641 L501,642 L498,643 L495,644 L491,645 L488,645 L485,646 L481,646 L478,646 L475,646 L471,646 L468,646 L465,646 L462,646 L458,646 L456,646 L453,645 L450,645 L447,645 L445,644 L442,644 L440,643 L437,642 L435,641 L433,640 L431,640 L429,639 L427,638 L425,636 L423,635 L421,634 L420,633 L418,632 L416,631 L415,629 L414,628 L412,626 L411,624 L410,623 L409,621 L408,619 L407,617 L406,616 L405,614 L404,612 L403,610 L403,608 L402,606 L402,605 L401,603 L401,601 L401,599 L400,597 L400,595 L400,592 L400,590 L401,588 L401,586 L401,584 L401,582 L402,579 L402,577 L403,575 L403,573 L404,571 L404,568 L405,566 L406,564 L407,562 L408,559 L409,557 L410,554 L412,552 L413,549 L415,546 L416,544 L418,541 L419,538 L421,535 L423,532 L424,529 L426,526 L428,523 L430,520 L432,516 L434,513 L436,510 L438,507 L440,503 L443,500 L445,496 L447,493 L450,489 L452,486 L455,482 L457,479 L460,475 L463,471 L466,467 L469,463 L472,459 L475,455 L478,451 L481,447 L484,443 L488,439 L491,435 L494,430 L497,426 L501,422 L504,418 L507,414 L510,410 L513,406 L516,402 L519,398 L521,394 L524,390 L527,386 L530,382 L532,379 L535,375 L538,371 L540,367 L543,364 L546,360 L548,357 L551,354 L553,351 L556,347 L558,344 L561,341 L563,338 L565,335 L568,332 L570,329 L572,326 L574,323 L576,321 L579,318 L581,315 L583,313 L585,311 L588,308 L590,306 L592,304 L595,301 L597,299 L599,297 L602,294 L604,292 L606,290 L608,288 L610,286 L613,284 L615,282 L617,281 L619,279 L621,278 L623,277 L625,276 L627,275 L629,275 L631,274 L633,274 L635,273 L637,273 L638,272 L640,272 L642,272 L644,272 L646,272 L648,272 L650,272 L652,273 L654,273 L656,273 L658,274 L660,274 L662,275 L664,275 L666,276 L667,277 L669,277 L671,278 L673,279 L674,280 L676,281 L677,282 L678,283 L679,284 L681,285 L682,287 L683,288 L684,290 L685,292 L685,294 L686,296 L687,298 L688,300 L688,302 L688,304 L689,306 L689,308 L689,310 L688,312 L688,314 L687,316 L686,318 L685,320 L683,322 L681,324 L679,327 L677,329 L675,332 L672,334 L669,337 L667,339 L664,342 L660,344 L657,346 L654,349 L650,351 L647,354 L643,356 L640,359 L636,361 L632,363 L628,366 L624,368 L619,371 L615,373 L610,375 L606,378 L601,380 L597,382 L592,384 L587,386 L583,388 L578,390 L574,392 L569,394 L564,395 L560,397 L555,398 L550,400 L545,401 L540,402 L536,404 L531,405 L525,406 L520,408 L515,409 L510,410 L504,412 L499,413 L493,415 L487,416 L481,418 L475,419 L469,421 L463,422 L456,424 L450,426 L444,427 L437,429 L431,430 L424,432 L418,433 L411,435 L405,437 L399,438 L393,439 L386,441 L380,442 L374,443 L368,445 L361,446 L355,447 L349,449 L343,450 L336,451 L330,452 L324,454 L318,455 L311,457 L305,458 L299,460 L292,462 L286,464 L280,466 L273,468 L267,470 L260,472 L254,474 L248,476 L241,478 L235,480 L229,482 L223,484 L216,487 L210,489 L204,491 L198,493 L192,495 L186,498 L180,500 L174,502 L168,504 L162,507 L156,509 L150,511 L144,514 L138,516 L133,518 L127,521 L122,523 L117,526 L112,528 L108,530 L103,533 L99,535 L95,537 L91,540 L88,542 L84,544 L81,547 L77,549 L74,552 L71,554 L69,556 L66,559 L63,561 L61,564 L58,566 L56,568 L54,571 L52,573 L50,576 L48,579 L46,581 L45,584 L43,587 L42,589 L41,592 L40,594 L39,597 L38,600 L38,602 L37,605 L37,607 L37,610 L37,612 L37,615 L37,617 L38,620 L39,622 L39,625 L40,627 L41,629 L43,631 L44,634 L45,636 L47,638 L49,640 L51,641 L53,643 L55,645 L57,646 L59,648 L61,649 L64,651 L67,652 L69,653 L72,654 L75,655 L78,656 L81,657 L84,658 L87,658 L91,659 L94,659 L97,659 L100,659 L104,659 L107,659 L110,658 L114,658 L117,657 L120,656 L124,656 L127,655 L130,654 L134,653 L137,651 L141,650 L144,648 L148,647 L151,645 L155,643 L158,641 L162,640 L165,638 L169,635 L173,633 L177,631 L180,629 L184,626 L188,624 L192,621 L195,619 L199,616 L203,613 L207,610 L210,607 L214,604 L217,601 L220,598 L224,595 L227,592 L231,588 L234,585 L237,582 L241,578 L244,575 L247,571 L251,568 L254,564 L257,560 L260,556 L263,553 L266,549 L269,545 L272,541 L275,537 L278,533 L281,529 L284,525 L287,520 L290,516 L293,512 L296,508 L298,504 L301,500 L304,496 L307,492 L310,488 L312,483 L315,479 L318,475 L321,471 L324,467 L327,463 L329,459 L332,454 L335,450 L338,446 L341,442 L344,438 L346,434 L349,430 L352,426 L355,423 L357,419 L360,415 L362,411 L365,408 L367,404 L370,401 L372,397 L375,394 L377,390 L380,387 L382,384 L384,381 L387,377 L389,374 L391,372 L393,369 L396,366 L398,363 L400,361 L402,358 L404,355 L406,353 L408,351 L409,348 L411,346 L413,344 L414,342 L416,339 L418,338 L419,336 L421,334 L423,332 L425,331 L427,329 L429,327 L430,326 L432,324 L434,323 L436,322 L437,320 L439,319 L441,317 L443,316 L444,315 L446,314 L448,313 L450,312 L452,311 L454,310 L456,310 L459,309 L461,308 L463,308 L466,307 L468,307 L471,307 L473,306 L476,306 L479,306 L481,305 L484,305 L486,304 L489,304 L491,303 L494,302 L496,302 L498,301 L500,300 L502,299 L503,298 L505,297 L507,296 L508,295 L510,294 L511,293 L512,292 L514,290 L515,289 L516,288 L517,287 L517,286 L518,284 L519,283 L519,281 L519,280 L519,278 L519,277 L518,275 L518,274 L517,272 L517,271 L516,270 L515,269 L513,268 L512,267 L511,267 L509,266 L508,266 L506,266 L505,266 L503,266 L502,266 L500,266 L499,267 L497,267 L495,268 L494,268 L492,268 L490,269 L489,270 L487,270 L485,271 L483,271 L482,272 L480,273 L478,273 L476,274 L474,275 L472,276 L470,277 L468,277 L466,278 L464,279 L462,280 L460,281 L457,281 L455,282 L452,282 L449,283 L446,283 L442,284 L439,284 L435,284 L431,285 L427,285 L423,285 L418,285 L414,285 L409,285 L404,285 L400,285 L395,285 L390,285 L385,285 L380,285 L375,284 L370,284 L365,284 L359,283 L354,282 L348,282 L342,281 L336,280 L331,279 L325,279 L319,278 L313,277 L307,277 L301,276 L296,276 L290,276 L285,276 L279,276 L274,276 L268,276 L262,277 L257,277 L251,277 L246,278 L241,278 L236,279 L230,280 L225,280 L221,281 L216,282 L211,283 L207,284 L203,285 L199,286 L195,288 L191,289 L187,290 L183,292 L180,293 L176,295 L173,297 L170,299 L167,300 L164,302 L161,304 L159,306 L157,308 L154,311 L152,313 L151,315 L149,318 L148,320 L146,323 L145,326 L144,329 L144,331 L143,334 L143,337 L142,340 L142,342 L142,345 L142,348 L143,350 L143,353 L144,356 L145,358 L146,361 L147,364 L148,366 L149,369 L151,371 L153,374 L154,376 L156,379 L158,381 L160,383 L162,385 L165,387 L167,389 L169,390 L172,392 L175,393 L177,394 L180,395 L183,396 L186,397 L189,397 L192,398 L195,398 L198,399 L201,399 L204,399 L207,399 L211,399 L214,398 L217,398 L220,397 L223,397 L226,396 L229,395 L232,393 L235,392 L239,391 L242,389 L245,388 L248,386 L250,384 L253,383 L256,381 L259,379 L261,377 L264,376 L266,374 L269,372 L271,370 L273,367 L275,365 L278,363 L280,360 L282,358 L284,356 L285,354 L287,352 L289,350 L290,348 L291,346 L293,345 L294,344Z"/></svg></a>
+    <ul class="nav-links">
+      <li><a href="#techniques"><span data-en="Techniques" data-pt="Técnicas">Técnicas</span></a></li>
+      <li><a href="#reviews"><span data-en="Reviews" data-pt="Avaliações">Avaliações</span></a></li>
+      <li><a href="#pricing"><span data-en="Pricing" data-pt="Preços">Preços</span></a></li>
+      <li><a href="#contact"><span data-en="Contact" data-pt="Contato">Contato</span></a></li>
+    </ul>
+  <button class="lang-btn" type="button" aria-label="Language / Idioma">EN</button>
+  </div>
+</header>
+
+<div id="top"></div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <h1 class="name">Juliana Carvalho</h1>
+      <p class="role-sub"><span data-en="Massage Therapist" data-pt="Massoterapeuta">Massoterapeuta</span></p>
+      <p class="hero-tagline"><span data-en="Your Body Speaks, My Hands Listen." data-pt="Seu corpo fala, minhas mãos escutam.">Seu corpo fala, minhas mãos escutam.</span></p>
+      <div class="cta-row hero-cta">
+        <a class="btn btn-primary" data-wa href="https://wa.me/35699770578" target="_blank" rel="noopener"><span data-en="Book a session" data-pt="Agendar uma sessão">Agendar uma sessão</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about"><div class="wrap"><div class="section-head"><div class="rule-label"><div class="rule"></div><span><span data-en="About" data-pt="Sobre">Sobre</span></span></div><h2><span data-en="Care that starts with listening" data-pt="Cuidado que começa pela escuta">Cuidado que começa pela escuta</span></h2></div><div class="about-grid" style="grid-template-columns: 1fr;"><div><p><span data-en="I'm Juliana, a Brazilian massage therapist offering home visits across Malta. I believe every body has its own story — and a good massage starts by listening to what it has to say today." data-pt="Sou a Juliana, brasileira, massoterapeuta, e atendo em domicílio em toda Malta. Acredito que cada corpo tem a sua própria história — e que uma boa massagem começa escutando o que ele tem a dizer hoje.">Sou a Juliana, brasileira, massoterapeuta, e atendo em domicílio em toda Malta. Acredito que cada corpo tem a sua própria história — e que uma boa massagem começa escutando o que ele tem a dizer hoje.</span></p><p style="font-family: 'Fraunces', serif; font-size: 1.4rem; line-height: 1.4; color: var(--teal-900); font-weight: 500;"><span data-en="Massage is more than touch. It's treatment. It's the self-care that no medication can give." data-pt="Massagem é mais do que toque. É tratamento. É o autocuidado que remédio nenhum consegue dar.">Massagem é mais do que toque. É tratamento. É o autocuidado que remédio nenhum consegue dar.</span></p><p><span data-en="The body always sends signals — tension, tiredness, heaviness, stiffness — and those are what guide me. Every session is tailored to you: pressure, rhythm and technique change with your routine and what you're looking for, whether that's to relax, ease discomfort or simply enjoy a moment that's just yours. And I bring that care to you, in the comfort of your own home." data-pt="O corpo sempre dá sinais — tensão, cansaço, peso, rigidez — e é por eles que eu me guio. Cada sessão é adaptada a você: pressão, ritmo e técnica mudam conforme a sua rotina e o que você busca, seja relaxar, aliviar desconfortos ou simplesmente ter um momento só seu. E eu levo esse cuidado até você, no conforto da sua casa.">O corpo sempre dá sinais — tensão, cansaço, peso, rigidez — e é por eles que eu me guio. Cada sessão é adaptada a você: pressão, ritmo e técnica mudam conforme a sua rotina e o que você busca, seja relaxar, aliviar desconfortos ou simplesmente ter um momento só seu. E eu levo esse cuidado até você, no conforto da sua casa.</span></p></div></div></div></section>
+<!-- TECHNIQUES -->
+<section id="techniques" style="background: var(--white); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="rule-label"><div class="rule"></div><span><span data-en="Techniques" data-pt="Técnicas">Técnicas</span></span></div>
+      <h2><span data-en="What a session can include" data-pt="O que uma sessão pode incluir">O que uma sessão pode incluir</span></h2>
+      <p><span data-en="Tap any technique to see what it involves. Each can be booked on its own or combined into a session tailored to you." data-pt="Toque em qualquer técnica para ver do que se trata. Cada uma pode ser agendada separadamente ou combinada em uma sessão feita sob medida para você.">Toque em qualquer técnica para ver do que se trata. Cada uma pode ser agendada separadamente ou combinada em uma sessão feita sob medida para você.</span></p>
+    </div>
+    <div class="chip-grid">
+      <details class="chip"><summary><span data-en="Relaxing Massage" data-pt="Massagem Relaxante">Massagem Relaxante</span></summary><p><span data-en="A gentle and calming massage designed to help you relax, reduce everyday stress and release mild muscle tension. Perfect if you want to switch off, feel lighter and enjoy a moment of self-care." data-pt="Uma massagem suave e calmante, pensada para ajudar você a relaxar, reduzir o estresse do dia a dia e aliviar tensões musculares leves. Perfeita para quem quer desligar, se sentir mais leve e aproveitar um momento de autocuidado.">Uma massagem suave e calmante, pensada para ajudar você a relaxar, reduzir o estresse do dia a dia e aliviar tensões musculares leves. Perfeita para quem quer desligar, se sentir mais leve e aproveitar um momento de autocuidado.</span></p></details>
+      <details class="chip"><summary><span data-en="Lymphatic Drainage" data-pt="Drenagem Linfática">Drenagem Linfática</span></summary><p><span data-en="A very gentle and rhythmic massage that uses light movements to encourage the natural flow of lymph in the body. It can help reduce feelings of swelling and heaviness and leave you feeling lighter and more refreshed." data-pt="Uma massagem muito suave e ritmada, com movimentos leves que estimulam o fluxo natural da linfa no corpo. Pode ajudar a reduzir a sensação de inchaço e peso, deixando você com mais leveza e disposição.">Uma massagem muito suave e ritmada, com movimentos leves que estimulam o fluxo natural da linfa no corpo. Pode ajudar a reduzir a sensação de inchaço e peso, deixando você com mais leveza e disposição.</span></p></details>
+      <details class="chip"><summary><span data-en="Myofascial Release" data-pt="Liberação Miofascial">Liberação Miofascial</span></summary><p><span data-en="A slow and focused massage that works on tight areas and stiffness in the muscles and surrounding tissues. It is ideal for people who feel restricted movement, persistent tightness or tension in specific areas." data-pt="Uma massagem lenta e focada, que trabalha áreas tensas e a rigidez dos músculos e dos tecidos ao redor. Ideal para quem sente restrição de movimento, tensão persistente ou desconforto em regiões específicas.">Uma massagem lenta e focada, que trabalha áreas tensas e a rigidez dos músculos e dos tecidos ao redor. Ideal para quem sente restrição de movimento, tensão persistente ou desconforto em regiões específicas.</span></p></details>
+      <details class="chip"><summary><span data-en="Foot Reflexology" data-pt="Reflexologia Podal">Reflexologia Podal</span></summary><p><span data-en="A relaxing treatment focused on the feet using pressure and massage techniques on different areas of the foot. It is a great choice if your feet feel tired or you simply want a relaxing treatment without a full-body massage." data-pt="Um tratamento relaxante focado nos pés, com pressões e técnicas de massagem em diferentes pontos da região. É uma ótima escolha se seus pés estão cansados ou se você quer relaxar sem uma massagem de corpo inteiro.">Um tratamento relaxante focado nos pés, com pressões e técnicas de massagem em diferentes pontos da região. É uma ótima escolha se seus pés estão cansados ou se você quer relaxar sem uma massagem de corpo inteiro.</span></p></details>
+      <details class="chip"><summary><span data-en="Hawaiian Lomi-Lomi" data-pt="Lomi-Lomi Havaiana">Lomi-Lomi Havaiana</span></summary><p><span data-en="A flowing and relaxing Hawaiian-style massage using long, smooth movements across the body. It is designed to create a deep sense of relaxation and help release physical and mental tension." data-pt="Uma massagem fluida e relaxante ao estilo havaiano, com movimentos longos e suaves por todo o corpo. Foi pensada para gerar uma sensação profunda de relaxamento e ajudar a liberar tensões físicas e mentais.">Uma massagem fluida e relaxante ao estilo havaiano, com movimentos longos e suaves por todo o corpo. Foi pensada para gerar uma sensação profunda de relaxamento e ajudar a liberar tensões físicas e mentais.</span></p></details>
+      <details class="chip"><summary><span data-en="Japanese Shiatsu" data-pt="Shiatsu Japonês">Shiatsu Japonês</span></summary><p><span data-en="A Japanese massage technique that uses gentle to firm pressure with the fingers, thumbs and palms. It focuses on areas of tension and can help you feel more relaxed, balanced and comfortable." data-pt="Uma técnica de massagem japonesa que usa pressão de suave a firme com os dedos, polegares e palmas das mãos. Foca nas áreas de tensão e pode ajudar você a sentir mais relaxamento, equilíbrio e conforto.">Uma técnica de massagem japonesa que usa pressão de suave a firme com os dedos, polegares e palmas das mãos. Foca nas áreas de tensão e pode ajudar você a sentir mais relaxamento, equilíbrio e conforto.</span></p></details>
+      <details class="chip"><summary><span data-en="Deep Tissue Massage" data-pt="Massagem Profunda (Deep Tissue)">Massagem Profunda (Deep Tissue)</span></summary><p><span data-en="A firm and focused massage designed to work on deeper muscle tension and tight areas. It is suitable for people who experience strong muscle stiffness or prefer a more intense massage." data-pt="Uma massagem firme e focada, pensada para trabalhar tensões musculares mais profundas e áreas travadas. Indicada para quem sente muita rigidez muscular ou prefere uma massagem mais intensa.">Uma massagem firme e focada, pensada para trabalhar tensões musculares mais profundas e áreas travadas. Indicada para quem sente muita rigidez muscular ou prefere uma massagem mais intensa.</span></p></details>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<!-- REVIEWS -->
+<section id="reviews" style="background: var(--white); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="rule-label"><div class="rule"></div><span><span data-en="Reviews" data-pt="Avaliações">Avaliações</span></span></div>
+      <h2><span data-en="What clients say" data-pt="O que os clientes dizem">O que os clientes dizem</span></h2>
+    </div>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <p><span data-en="&quot;It was a wonderful experience! Juliana has amazing hands and was very caring, attentive, and professional. The massage was extremely relaxing while also being very well done. I felt lighter and completely relaxed afterwards." data-pt="&quot;Foi uma experiência maravilhosa! A Juliana tem mãos incríveis e foi muito cuidadosa, atenciosa e profissional. A massagem foi extremamente relaxante e, ao mesmo tempo, muito bem feita. Saí me sentindo mais leve e completamente relaxada.">"Foi uma experiência maravilhosa! A Juliana tem mãos incríveis e foi muito cuidadosa, atenciosa e profissional. A massagem foi extremamente relaxante e, ao mesmo tempo, muito bem feita. Saí me sentindo mais leve e completamente relaxada.</span><br><br><span data-en="You can really feel the care and dedication she puts into her work. I would definitely have another massage with her and highly recommend her!&quot;" data-pt="Dá para sentir de verdade o carinho e a dedicação que ela coloca no trabalho. Com certeza faria outra massagem com ela e recomendo muito!&quot;">Dá para sentir de verdade o carinho e a dedicação que ela coloca no trabalho. Com certeza faria outra massagem com ela e recomendo muito!"</span></p>
+        <div class="who">Debora</div>
+      </div>
+      <div class="testimonial-card">
+        <p><span data-en="&quot;Hey Ju! How are you? Just wanted to say something about the massage we did. Honestly, it was so good!! I often end up with really bad posture while tattooing, and the massage helped me a lot. Thank you so much!! I'm already looking forward to the next sessions.&quot;" data-pt="&quot;Oi, Ju! Tudo bem? Queria comentar sobre a massagem que fizemos. Sinceramente, foi muito boa!! Eu costumo ficar com a postura péssima enquanto tatuo, e a massagem me ajudou demais. Muito obrigado!! Já estou ansioso pelas próximas sessões.&quot;">"Oi, Ju! Tudo bem? Queria comentar sobre a massagem que fizemos. Sinceramente, foi muito boa!! Eu costumo ficar com a postura péssima enquanto tatuo, e a massagem me ajudou demais. Muito obrigado!! Já estou ansioso pelas próximas sessões."</span></p>
+        <div class="who">Thiago</div>
+      </div>
+      <div class="testimonial-card">
+        <p><span data-en="&quot;I recently had a massage experience with Juh — simply flawless work! She has magic hands, excellent technique, and manages to renew all your energy, releasing any tension with so much care. I recommend her with my eyes closed! Excellent professional.&quot;" data-pt="&quot;Fiz uma massagem com a Juh recentemente — um trabalho simplesmente impecável! Ela tem mãos mágicas, técnica excelente e consegue renovar toda a sua energia, liberando qualquer tensão com muito carinho. Recomendo de olhos fechados! Excelente profissional.&quot;">"Fiz uma massagem com a Juh recentemente — um trabalho simplesmente impecável! Ela tem mãos mágicas, técnica excelente e consegue renovar toda a sua energia, liberando qualquer tensão com muito carinho. Recomendo de olhos fechados! Excelente profissional."</span></p>
+        <div class="who">Mayte</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="rule-label"><div class="rule"></div><span><span data-en="Pricing" data-pt="Preços">Preços</span></span></div>
+      <h2><span data-en="Massage at Home — Introductory Prices" data-pt="Massagem em Domicílio — Preços de Lançamento">Massagem em Domicílio — Preços de Lançamento</span></h2>
+      <p><span data-en="Home-visit pricing across Malta. Book a package to save on your next sessions." data-pt="Valores para atendimento em domicílio em toda Malta. Escolha um pacote e economize nas próximas sessões.">Valores para atendimento em domicílio em toda Malta. Escolha um pacote e economize nas próximas sessões.</span></p>
+    </div>
+    <div class="table-scroll">
+      <table class="price-table">
+        <thead>
+          <tr>
+            <th><span data-en="Treatment" data-pt="Tratamento">Tratamento</span></th>
+            <th><span data-en="Single" data-pt="Sessão avulsa">Sessão avulsa</span></th>
+            <th><span data-en="2 Sessions" data-pt="2 sessões">2 sessões</span></th>
+            <th><span data-en="4 Sessions" data-pt="4 sessões">4 sessões</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="treatment"><span data-en="Relaxing Massage" data-pt="Massagem Relaxante">Massagem Relaxante</span></td><td>€45</td><td>€85</td><td>€160</td></tr>
+          <tr><td class="treatment"><span data-en="Sports Massage" data-pt="Massagem Esportiva">Massagem Esportiva</span></td><td>€55</td><td>€105</td><td>€200</td></tr>
+          <tr><td class="treatment"><span data-en="Therapeutic Massage" data-pt="Massagem Terapêutica">Massagem Terapêutica</span></td><td>€55</td><td>€105</td><td>€200</td></tr>
+          <tr><td class="treatment"><span data-en="Lymphatic Drainage" data-pt="Drenagem Linfática">Drenagem Linfática</span></td><td>€45</td><td>€85</td><td>€160</td></tr>
+          <tr><td class="treatment"><span data-en="Myofascial Release" data-pt="Liberação Miofascial">Liberação Miofascial</span></td><td>€60</td><td>€115</td><td>€220</td></tr>
+          <tr><td class="treatment"><span data-en="Foot Reflexology*" data-pt="Reflexologia Podal*">Reflexologia Podal*</span></td><td>€30</td><td>€55</td><td>€100</td></tr>
+          <tr><td class="treatment"><span data-en="Hawaiian Lomi-Lomi" data-pt="Lomi-Lomi Havaiana">Lomi-Lomi Havaiana</span></td><td>€50</td><td>€95</td><td>€180</td></tr>
+          <tr><td class="treatment"><span data-en="Japanese Shiatsu" data-pt="Shiatsu Japonês">Shiatsu Japonês</span></td><td>€50</td><td>€95</td><td>€180</td></tr>
+          <tr><td class="treatment"><span data-en="Deep Tissue Massage" data-pt="Massagem Profunda (Deep Tissue)">Massagem Profunda (Deep Tissue)</span></td><td>€55</td><td>€105</td><td>€200</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="price-note"><span data-en="*Foot Reflexology sessions run 30 minutes; all other treatments are 60-minute sessions." data-pt="*A sessão de Reflexologia Podal dura 30 minutos; todos os outros tratamentos são sessões de 60 minutos.">*A sessão de Reflexologia Podal dura 30 minutos; todos os outros tratamentos são sessões de 60 minutos.</span></p>
+    <p class="price-note"><span data-en="Other packages available upon request." data-pt="Outros pacotes disponíveis sob consulta.">Outros pacotes disponíveis sob consulta.</span></p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="rule-label"><div class="rule"></div><span><span data-en="Contact" data-pt="Contato">Contato</span></span></div>
+      <h2><span data-en="Let's find a time that suits you" data-pt="Vamos encontrar um horário que funcione para você">Vamos encontrar um horário que funcione para você</span></h2>
+      <p><span data-en="Home-visit massage across Malta." data-pt="Massagem em domicílio em toda Malta.">Massagem em domicílio em toda Malta.</span></p>
+    </div>
+    <div class="contact-grid">
+      <ul class="contact-list">
+        <li><span class="label"><span data-en="Phone &amp; WhatsApp" data-pt="Telefone e WhatsApp">Telefone e WhatsApp</span></span><a href="tel:+35699770578">(+356) 9977 0578</a></li>
+        <li><span class="label"><span data-en="Email" data-pt="E-mail">E-mail</span></span><a href="mailto:carvalhojuliana608@gmail.com">carvalhojuliana608@gmail.com</a></li>
+        <li><span class="label"><span data-en="Based in" data-pt="Localização">Localização</span></span><span data-en="Malta — home-visit service" data-pt="Malta — atendimento em domicílio">Malta — atendimento em domicílio</span></li>
+      </ul>
+      <div>
+        <a class="btn btn-primary" data-wa href="https://wa.me/35699770578" target="_blank" rel="noopener"><span data-en="Message on WhatsApp" data-pt="Chamar no WhatsApp">Chamar no WhatsApp</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<a class="wa-float" data-wa href="https://wa.me/35699770578" target="_blank" rel="noopener"><span data-en="Book on WhatsApp" data-pt="Agendar no WhatsApp">Agendar no WhatsApp</span></a>
+
+<footer class="credit"><span data-en="Juliana Carvalho — Massage Therapist, Malta" data-pt="Juliana Carvalho — Massoterapeuta, Malta">Juliana Carvalho — Massoterapeuta, Malta</span></footer>
+
+<script>
+(function () {
+  var slider = document.querySelector('.testimonial-grid');
+  if (!slider) return;
+  var isDown = false, startX, scrollLeft;
+  slider.addEventListener('pointerdown', function (e) {
+    isDown = true;
+    slider.classList.add('dragging');
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+  });
+  ['pointerup', 'pointerleave'].forEach(function (evt) {
+    slider.addEventListener(evt, function () {
+      isDown = false;
+      slider.classList.remove('dragging');
+    });
+  });
+  slider.addEventListener('pointermove', function (e) {
+    if (!isDown) return;
+    e.preventDefault();
+    var x = e.pageX - slider.offsetLeft;
+    slider.scrollLeft = scrollLeft - (x - startX) * 1.4;
+  });
+})();
+</script>
+
+<script>
+(function () {
+  var T = {
+    pt: { title: 'Juliana Carvalho — Massoterapeuta', desc: 'Massagem em domicílio em toda Malta com Juliana Carvalho: relaxante, drenagem linfática, shiatsu, deep tissue e mais.', wa: 'Olá Juliana, gostaria de agendar uma massagem.', lang: 'pt-BR', btn: 'EN', home: 'Juliana Carvalho — início' },
+    en: { title: 'Juliana Carvalho — Massage Therapist', desc: 'Home-visit massage across Malta with Juliana Carvalho: relaxing, lymphatic drainage, shiatsu, deep tissue and more.', wa: "Hello Juliana, I'd like to book a massage.", lang: 'en', btn: 'PT', home: 'Juliana Carvalho — home' }
+  };
+  var btn = document.querySelector('.lang-btn');
+  function setLang(l) {
+    var t = T[l];
+    document.documentElement.lang = t.lang;
+    document.title = t.title;
+    var m = document.querySelector('meta[name="description"]'); if (m) m.setAttribute('content', t.desc);
+    document.querySelectorAll('[data-en]').forEach(function (el) { el.textContent = el.getAttribute('data-' + l); });
+    document.querySelectorAll('[data-wa]').forEach(function (a) { a.href = 'https://wa.me/35699770578?text=' + encodeURIComponent(t.wa); });
+    var logo = document.querySelector('.nav-logo'); if (logo) logo.setAttribute('aria-label', t.home);
+    btn.textContent = t.btn;
+    try { localStorage.setItem('jc-lang', l); } catch (e) {}
+  }
+  var cur = 'pt';
+  try { cur = localStorage.getItem('jc-lang') || ''; } catch (e) {}
+  if (cur !== 'pt' && cur !== 'en') cur = /^pt/i.test(navigator.language || '') ? 'pt' : 'en';
+  setLang(cur);
+  btn.addEventListener('click', function () { cur = cur === 'pt' ? 'en' : 'pt'; setLang(cur); });
+})();
+</script>
+</body>
+                                                                                                                                             </html>
